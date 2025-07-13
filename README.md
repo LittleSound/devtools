@@ -2,33 +2,33 @@
 
 # Vite DevTools
 
-Vite DevTools is a set of tools for visualizing the internal state and build analysis for Vite and Rolldown (currently only work with [`rolldown-vite`](https://github.com/vitejs/rolldown-vite)).
+Vite DevTools 是一套用于可视化 Vite 和 Rolldown 内部状态和构建分析的工具集（目前仅适用于 [`rolldown-vite`](https://github.com/vitejs/rolldown-vite)）。
 
 > [!IMPORTANT]
-> This project is still in development. Not yet usable. You may preview it by building this project from source.
+> 该项目仍在开发中。尚未可用。您可以通过从源代码构建此项目来预览。
 
-## 🏗️ Project Progress
+## 🏗️ 项目进展
 
-State: **🚧 Work in progress**
+状态：**🚧 正在开发中**
 
-We are currently focusing on get the basic data visualization working for **Vite-Rolldown's build mode**. Dev mode will be delayed for later until Vite get the full-bundler dev mode.
+我们目前专注于让 **Vite-Rolldown 构建模式** 的基本数据可视化正常工作。开发模式将推迟到后面，直到 Vite 完全支持全打包器开发模式。
 
-You can check the [TODO list](https://github.com/vitejs/devtools/issues/9) (excluding `hold-off`) if you are interested in helping out.
+如果您有兴趣帮助开发，可以查看 [TODO 列表](https://github.com/vitejs/devtools/issues/9)（不包括 `hold-off` 标签的项目）。
 
-For the `devtools-webext` package, we plan to use it for dev mode in the future, so no contributions are needed at this time.
+对于 `devtools-webext` 包，我们计划在将来用于开发模式，因此目前不需要贡献。
 
-## 🧑‍💻 Development Guide
+## 🧑‍💻 开发指南
 
-Currently Vite DevTools only supports build time inspection, to develop this project, you first need to build itself to get the Rolldown meta for testing.
+目前 Vite DevTools 仅支持构建时检查，要开发此项目，您首先需要构建它自身以获得用于测试的 Rolldown 元数据。
 
-- `pnpm install` to install dependencies
-- `pnpm build` first to get the Rolldown logs under `./packages/devtools/.rolldown` folder
-- `pnpm dev` to start the dev server
+- `pnpm install` 安装依赖
+- `pnpm build` 首先构建以在 `./packages/devtools/.rolldown` 文件夹下获得 Rolldown 日志
+- `pnpm dev` 启动开发服务器
 
-As the data interface between Rolldown is not yet stable, and breaking changes are expected. We locked the Rolldown version in our `pnpm-workspace.yaml`, which means the published version may not work with the latest Rolldown.
+由于 Rolldown 与数据接口尚不稳定，预计会有破坏性变更。我们在 `pnpm-workspace.yaml` 中锁定了 Rolldown 版本，这意味着发布的版本可能无法与最新的 Rolldown 一起使用。
 
-When pulling the latest commits, it's recommended to remove the `./packages/devtools/.rolldown` folder and run `pnpm build` again to get the latest data format.
+当拉取最新提交时，建议删除 `./packages/devtools/.rolldown` 文件夹并重新运行 `pnpm build` 以获得最新的数据格式。
 
-## 📄 Licenses
+## 📄 许可证
 
-This project is licensed under the [MIT License](LICENSE).
+此项目采用 [MIT 许可证](LICENSE)。
